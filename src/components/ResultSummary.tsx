@@ -42,7 +42,8 @@ const ResultSummary = () => {
                   {answers[ques.id]?.correct ? "Correct": "Incorrect"}
                 </span>
                 <span className="ml-2 text-xs text-gray-500">{ques.difficulty}</span>
-                <span className="ml-2 text-xs text-blue-700">+{ques.points}pts</span>
+                <span className="ml-2 text-xs text-blue-700">{answers[ques.id]?.correct ? `${ques.points}pts` : "0pts"}</span>
+
               </div>
 
               <div className="text-sm text-gray-700 mb-2">

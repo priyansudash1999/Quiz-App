@@ -1,69 +1,93 @@
-# React + TypeScript + Vite
+# 🎯 Quiz App (UI Challenge)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive quiz application built with **React**, **Zustand**, and **Tailwind CSS**.  
+Users can answer multiple-choice questions and view their score with instant feedback.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ Responsive and clean UI with Tailwind CSS
+- ✅ Multiple-choice questions
+- ✅ State management using Zustand
+- ✅ Score tracking with dynamic color feedback (green/red)
+- ✅ Component-based architecture (`QuestionCard`, `Results`, etc.)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React** – UI library
+- **TypeScript** – Type safety
+- **Zustand** – Lightweight state management
+- **Tailwind CSS** – Utility-first styling
+- **Vite** – Fast build tool
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📂 Project Structure
+
+```text
+quiz-app/
+├── node_modules/          # Dependencies
+├── public/                # Public assets
+├── src/                   # Source code
+│   ├── components/        # Reusable UI components
+│   │   ├── index.ts
+│   │   ├── QuestionCard.tsx
+│   │   └── ResultSummary.tsx
+│   │
+│   ├── contexts/          # store
+│   │   └── useQuestionStore.ts
+│   │
+│   ├── data/              # Offline data
+│   │   └── questions.json
+│   │
+│   ├── App.tsx            # Root component
+│   ├── index.css          # Global styles
+│   ├── main.tsx           # Entry point
+│   └── vite-env.d.ts      # Vite TypeScript types
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html             # Main HTML file
+├── package.json
+├── package-lock.json
+├── README.md
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts         # Vite configuration
+
+
+---
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚡ Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1️⃣ Clone the repo
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/priyansudash1999/Quiz-App
+cd quiz-app
 ```
+
+### 2️⃣ Install dependencies
+
+```javascript
+npm install
+```
+
+### 3️⃣ Run locally
+
+```javascript
+npm run dev
+```
+
+### 4️⃣ Build for production
+
+```javascript
+npm run build
+```
+
+## Project ScreenShots
