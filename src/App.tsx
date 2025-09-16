@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import QuestionCard from './components/QuestionCard'
 import questions from "./data/questions.json"
 import "./index.css"
-import ResultSummary from './components/ResultSummary'
+import { QuestionCard, ResultSummary } from './components'
 
 const App = () => {
 
