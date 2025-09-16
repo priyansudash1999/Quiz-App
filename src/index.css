@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;   /* Blue */
+  --color-green: #00b75f;     /* Ainstein Green */
+  --color-orange: #ff9d33;    /* Sunburst Orange */
+  --color-pink: #ff6ca1;      /* Bubblegum Pink */
+
+  --font-h1: 20px;
+  --font-body: 16px;
+  --font-label: 14px;
+}
+
+
+body {
+  @apply bg-gray-50 text-gray-900 font-sans;
+}
+
+h1, h2, h3, h4, h5 {
+  @apply font-semibold;
+}
+
+button {
+  @apply transition-all duration-150 ease-in-out;
+}
+
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
